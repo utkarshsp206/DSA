@@ -31,5 +31,14 @@ cout<<"Enter the value of n: ";
 cin>>n;
 cout<<countDigits(n);
 
+list<int> l2;
+l2.push_back(2);
+l2.push_back(3);
+l2.push_front(1); //vector doesn't have push_front while list does because it uses doubly linkedlist
+for(auto it : l2){
+	cout<<it<<" ";
+}
+
+
 return 0;
 }
