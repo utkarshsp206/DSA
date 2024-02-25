@@ -41,9 +41,7 @@ v3.insert(v.begin(),2,20);// at v.begin(), insert 2 times 10 v3 = {20,20,10,10}
 v3.pop_back();
 
 v3.clear(); //erase all the elements of v3
-
 cout<<s.empty();
-
 for(auto it: s){
     cout<<it<<" ";
 }
