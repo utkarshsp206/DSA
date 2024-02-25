@@ -12,34 +12,37 @@ Result:
 #include <iostream>
 using namespace std;
 
-void printPattern(int N) {
-    // Upper half
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < 2 * N; j++) {
-            if (j < N - i || j >= N + i)
-                cout << "*";
-            else
-                cout << " ";
+void symmetry(int n) {
+    for(int i=1;i<=2*n;i++){
+        int noOfStars = 2*n - 2*(i-1);
+        if(i>n) noOfStars = (i-n)*2;
+        int noOfSpaces = 2*(i-1);       //numberofspaces = 2n - number of star
+        if(i>n) noOfSpaces = 4*n - 2*i;
+        for(int j=1;j<=2*n;j++){
+            if(j>noOfStars/2 && j< noOfStars/2 + noOfSpaces +1){
+
+                cout<<" ";
+
+            }else{
+
+                cout<<"*";
+
+            }
+
+            cout<<" ";
+
         }
-        cout << endl;
+
+        cout<<endl;
+
     }
 
-    // Lower half
-    for (int i = N - 1; i >= 0; i--) {
-        for (int j = 0; j < 2 * N; j++) {
-            if (j < N - i || j >= N + i)
-                cout << "*";
-            else
-                cout << " ";
-        }
-        cout << endl;
-    }
-}
+}  
 
 int main() {
     int N;
     cout << "Enter the value of N: ";
     cin >> N;
-    printPattern(N);
+    symmetry(N);
     return 0;
 }
