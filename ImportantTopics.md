@@ -14,4 +14,6 @@
 
 ## Strings
 1. Reverse Words in a String [Question](https://leetcode.com/problems/reverse-words-in-a-string/description/)
+2. Substring with exactly K distinct Characters [GFG](https://www.geeksforgeeks.org count-number-of-substrings-with-exactly-k-distinct-characters/)
+3. Longest Palindromic Substring [Question](https://leetcode.com/problems/longest-palindromic-substring/)
 
