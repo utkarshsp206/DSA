@@ -17,6 +17,8 @@ void merge(vector<int> &arr, int low, int mid, int high){
         }
     }
 
+    //*Merging the remaining elements (if any)
+
     while(left<=mid){
         temp.push_back(arr[left]);
         left++;
@@ -27,6 +29,7 @@ void merge(vector<int> &arr, int low, int mid, int high){
         right++;
     }
 
+//*Copying elements from temp to arr
   for(int i=low;i<=high;i++){
     arr[i]=temp[i-low];
   }
