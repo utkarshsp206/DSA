@@ -47,7 +47,7 @@ class Queue{
         front = front->next;
         delete temp;
         size--;
-        return popped;;
+        return popped;
     }
 
     void print(){
