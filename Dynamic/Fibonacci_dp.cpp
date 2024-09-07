@@ -1,31 +1,44 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-class Solution
-{
-
-public:
-    int fib(int n)
-    {
-        int f[n + 2];
-        int i;
-        f[0] = 0;
-        f[1] = 1;
-
-        for (i = 2; i <= n; i++)
-        {
-            f[i] = f[i - 1] + f[i - 2];
-        }
-        return f[n];
+//* Using Memoization
+int fibonacci(int n, vector<int> &dp){
+    if(n<=1){
+        return n;
     }
-};
-
-int main()
-{
-    Solution s;
-    int n = 9;
-
-    cout << s.fib(n);
-    return 0;
+    if(dp[n]!=-1) return dp[n];
+    return dp[n]=fibonacci(n-1, dp)+fibonacci(n-2, dp);
 }
+//! TC: O(N)  SC: O(N)+O(N)
 
+//* Using Tabulation
+int fiboTab(int n, vector<int> &dp){
+    dp[0]=0;
+    dp[1]=1;
+    for(int i=2;i<n+1;i++){
+        dp[i]=dp[i-1]+dp[i-2];
+    }
+    return dp[n];
+}
+//! TC: O(N)  SC: O(N)
+
+//* Space Optimization
+int fiboTabSpace(int n){
+    int prev=1;
+    int prev2=0;
+    for(int i=2;i<n+1;i++){
+        int curr = prev+prev2;
+        prev2=prev;
+        prev=curr;
+    }
+    return prev;
+} 
+//! TC: O(N)  SC: O(1)
+
+int main() {
+int n=5;
+vector<int> dp(n+1,-1);
+cout<<fiboTabSpace(n);
+
+return 0;
+}
