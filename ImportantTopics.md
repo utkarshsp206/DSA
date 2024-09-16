@@ -17,3 +17,9 @@
 2. Substring with exactly K distinct Characters [GFG](https://www.geeksforgeeks.org count-number-of-substrings-with-exactly-k-distinct-characters/)
 3. Longest Palindromic Substring [Question](https://leetcode.com/problems/longest-palindromic-substring/)
 
+
+
+### Trees
+1. Maximum Path Sum [Question](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+2. Boundary Traversal [Question](https://www.naukri.com/code360/problems/boundary-traversal_790725)
+
